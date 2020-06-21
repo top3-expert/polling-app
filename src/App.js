@@ -62,12 +62,13 @@ class App extends React.Component {
     return (
       <Container>
         <Row>
-          <div id="container">
-            <Alert key="1" variant="light">
+            <h1> <Alert key="1" variant="light">
               Voting App
-          </Alert>
-          <p>Vote as many times as you like.</p>
-          </div>
+          </Alert> </h1>
+          <hr />
+        </Row>
+        <Row>
+        <p>Vote as many times as you like.</p>
         </Row>
         <Row>
           <Col>
