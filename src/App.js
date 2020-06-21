@@ -63,14 +63,14 @@ class App extends React.Component {
               Vote Yes
               </Button>
             <hr />
-            <h3> Total <Badge variant="light">{this.state.votesYes}</Badge> </h3>
+            <h4> Total <Badge variant="light">{this.state.votesYes}</Badge> </h4>
           </Col>
           <Col>
             <Button variant="outline-danger" onClick={this.handleVoteNo}>
               Vote no
               </Button>
             <hr />
-            <h3> Total <Badge variant="light">{this.state.votesNo}</Badge> </h3>
+            <h4> Total <Badge variant="light">{this.state.votesNo}</Badge> </h4>
           </Col>
         </Row>
       </Container>

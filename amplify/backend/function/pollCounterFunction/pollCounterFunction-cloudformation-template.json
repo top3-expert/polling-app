@@ -76,7 +76,7 @@
 				"Timeout": "25",
 				"Code": {
 					"S3Bucket": "amplify-pollcounter-dev-82554-deployment",
-					"S3Key": "amplify-builds/pollCounterFunction-5448476649664d397131-build.zip"
+					"S3Key": "amplify-builds/pollCounterFunction-5243355a4c74436c4863-build.zip"
 				}
 			}
 		},

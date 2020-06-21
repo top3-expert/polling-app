@@ -212,19 +212,8 @@ app.get(path + '/object' + hashKeyPath + sortKeyPath, function(req, res) {
         res.json({success: 'post call succeed!', url: req.url, data: data})
       }
     })
-  })
-
-
- // dynamodb.put(putItemParams, (err, data) => {
-  dynamodb.put(updateItemParams, (err, data) => {  
-    if(err) {
-      res.statusCode = 500;
-      res.json({error: err, url: req.url, body: req.body});
-    } else{
-      res.json({success: 'post call succeed!', url: req.url, data: data})
-    }
   });
-});
+
 
 /**************************************
 * HTTP remove method to delete object *
