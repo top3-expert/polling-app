@@ -14,7 +14,7 @@ let partitionKey = 'poll-001';
 
 class App extends React.Component {
 
-  componentDidMount() {
+  updateVotes () {
     API.get(apiName, path + partitionKey).then(response => {
       let votesYes = response[0].votesYes;
       let votesNo = response[0].votesNo;
@@ -24,6 +24,9 @@ class App extends React.Component {
       })
       console.log(response)
     });
+  }
+  componentDidMount() {
+    this.updateVotes();
   }
 
   state = {
@@ -39,11 +42,19 @@ class App extends React.Component {
     API.post(apiName, path, init).then(response => {
       console.log(response);
     })
-    console.log('in vote Yes');
+    this.updateVotes();
   }
 
   handleVoteNo = () => {
-    console.log('in vote No');
+    const init = {
+      queryStringParameters: {
+        vote: 'no'
+      }
+    }
+    API.post(apiName, path, init).then(response => {
+      console.log(response);
+    })
+    this.updateVotes();
   }
 
   render() {
