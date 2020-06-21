@@ -66,6 +66,7 @@ class App extends React.Component {
             <Alert key="1" variant="light">
               Voting App
           </Alert>
+          <p>Vote as many times as you like.</p>
           </div>
         </Row>
         <Row>
